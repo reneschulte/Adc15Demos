@@ -117,7 +117,7 @@ void D3DPanel::Render()
 	m_d3dContext->OMSetRenderTargets(1, targets, m_depthStencilView.Get());
 
 	// Clear the back buffer and depth stencil view.
-	m_d3dContext->ClearRenderTargetView(m_renderTargetView.Get(), DirectX::Colors::Transparent);
+	m_d3dContext->ClearRenderTargetView(m_renderTargetView.Get(), DirectX::Colors::Gray);
 	m_d3dContext->ClearDepthStencilView(m_depthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
 	// Prepare the constant buffer to send it to the Graphics device.
